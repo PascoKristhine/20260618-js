@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* loading screen */
+#loading {
+    transition: all 1s;
+    background: #ddd;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.spinner {
+    width: 200px;
+    height: 200px;
+}
+
+/* ローディング後、画面を隠す */
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* contents */
+.gallery {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
